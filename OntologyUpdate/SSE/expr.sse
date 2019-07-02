@@ -1,0 +1,6 @@
+(expr 
+ (<foobar> 
+  (+ 
+   (regex ?x "word")
+   (- 1)
+   )))

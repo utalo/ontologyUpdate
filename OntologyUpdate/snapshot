@@ -1,0 +1,55 @@
+#!/bin/bash
+
+MODULE="$@"
+
+for m in $MODULE
+do
+  if [ "$m" = "ARQ" ]
+      then
+      echo "Error: can't snapshot ARQ to itself" 1>&2
+      exit 1
+  fi
+  done
+
+# Where to move the jars to
+if [ "$MODULE" != "" ]
+then
+    LIBDIRS="$MODULE"
+    SRCDIRS="$MODULE"
+else
+    LIBDIRS="${LIBDIR:-TDB SDB Joseki3}"
+    SRCDIRS="${SRCDIR:-TDB SDB Joseki3}"
+fi
+
+rm -f lib/arq.jar lib/arq-extra.jar
+ant jar
+
+
+for d in $LIBDIRS
+do
+  echo "Moving ARQ jars to project $d"
+  cp -u lib/arq.jar ../$d/lib
+  cp -u lib/arq-extra.jar ../$d/lib
+  # cp -u lib/arq-sse.jar ../$d/lib
+  done
+
+## Keep the JARs around for Eclipse libraries
+## rm -f lib/arq.jar
+## rm -f lib/arq-extra.jar
+## rm -f lib/arq-sse.jar
+
+rm -f arq-src.zip
+
+for d in src src-dev src-test
+do
+  ( cd $d ; find . -name test -prune -o -name .svn -prune -o -print | \
+    xargs -n 200 zip -q ../arq-src.zip
+  )
+  done
+
+for d in  $SRCDIRS
+do
+  echo "Moving arq-src.zip to project $d"
+  cp -u arq-src.zip ../$d
+  done
+rm -f arq-src.zip

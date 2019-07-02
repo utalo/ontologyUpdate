@@ -1,0 +1,27 @@
+<rdf:RDF
+  xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+  xmlns:aifb ='http://aifb/'
+ >
+  <rdf:Description rdf:about="http://aifb/Philipp">
+    <rdf:type rdf:resource="http://aifb/PhDStudent"/>
+    <aifb:hasAffiliation rdf:resource="http://aifb/Aifb"/>
+	<aifb:leads rdf:resource="http://aifb/Xmedia"/>
+	<aifb:worksOn rdf:resource="http://aifb/Multipla"/>
+	<aifb:supervises rdf:resource="http://aifb/Thanh"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://aifb/Thanh">
+    <rdf:type rdf:resource="http://aifb/PhDStudent"/>
+    <aifb:hasAffiliation rdf:resource="http://aifb/Aifb"/>
+	<aifb:worksOn rdf:resource="http://aifb/Xmedia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://aifb/Xmedia">
+    <rdf:type rdf:resource="http://aifb/Project"/>
+    <aifb:assocInstitution rdf:resource="http://aifb/Aifb"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://aifb/Multipla">
+    <rdf:type rdf:resource="http://aifb/Project"/>
+    <aifb:assocInstitution rdf:resource="http://aifb/Aifb"/>
+  </rdf:Description>
+<rdf:Description rdf:about="http://aifb/aifb">
+    <rdf:type rdf:resource="http://aifb/employer"/>
+  </rdf:Description></rdf:RDF>

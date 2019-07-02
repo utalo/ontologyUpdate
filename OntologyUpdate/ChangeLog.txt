@@ -1,0 +1,215 @@
+ChangeLog for ARQ
+=================
+
+==== ARQ 2.5
+
++ Redesign of quad support. 
+  AlgebraGeneratorQuad retired
+  Use Algebra.toQuadForm(Op) to turn an algebra expression into quads.   
+
++ fn:string-join was misnamed - was actually renamed as fn:concat
+  And now takes arbitrary number of arguments
+
++ Add afn:strjoin(str, string...) 
+
++ Bug fix: path parsing when "a" (for rdf:type) 
+           is used in a property list (using ;) 
+
++ Bug fix: LET expressions did not eliminate solutions when
+    assigned a new, different value.
+
++ Internal renaming to make the class names better reflect their role
+  particularly not using the term "compile" for things now considered
+  to happen during query execution.  
+
++ Internal utilities updated for TDB
+
++ Signal start/end of updates using the graph-level events mechanism.
+
+==== ARQ 2.4
+
++ Change to interface for query compilation : Algebra.compile and Algebra.optimize 
+
++ Property paths added.  See documentation.
+  
++ Simplify the interface between ARQ and data sources.
+  StageGenerator example updated.   
+
+==== ARQ 2.3
+
++ HAVING / ORDER BY variable, where variable is SELECT as an aggregate or computed value now works. 
+  (current restriction: can't have the expression directly in the ORDER BY - need to project the variable)  
+
++ Upgrade to Lucene 2.3.1
+
++ Change return type of ResultFactor.copyResults to ResultSetRewinable (a sub interface of ResultSet).
+
++ Allow inital bindings for Updates (ignored unless a Modify operation)
+
++ Added SUM(?x) aggregate
+
++ Added { SELECT } (nested SELECT) and LET (assignment) to ARQ extended SPARQL.
+
++ Added optimization rewrite of algebra expressions for FILTER(?x = :x) and FILTER(sameTerm(?x, :x))
+  so that the required term is substituted into the pattern before execution.
+  Cautiously applied to basic graph patterns and quad patterns.
+ 
++ Bug fix: ARQ 2.2 broke property functions in many nested structures. 
+
++ src-examples: example of SPARQL/Update
+
++ Fix bug: OpUnion flattening was not happening (Main query engine, OpCompiler) 
+
++ Fix bug: HttQueryEngine(in HttpQuery) generated bad POST requests with a trailing &.
+
++ New command arq.load, which loads files into graphs.  Special case of arq.update
+
+==== ARQ 2.2
+
++ Added command line tool, arq.update, for applying SPARQL/Update requests
+  to a graph store or dataset described by an assembler file.
+
++ LARQ: 
+  Remove restriction that indexes have to be closed for writing before reading
+  Becare: in Lucene, reader indexes (like LARQIndexes) see the index as at the point
+  in time when the index was created.  Must get a new reader to see later updates.
+
++ QueryEngineHTTP
+  + Can be created via QueryExecutionFactory
+  + Operations for adding HTTP parameters and also for basic authentication of HTTP.  
+
++ Added ParserRegistry (courtesy of Olaf Hartig)
+
++ Reworked property functions so they formally in the algebra.
+
++ Jar change: commons-logging-1.1.1.jar
+
++ Bug fix: text output of result sets sometimes gave full bNode label - revert to
+  old design where a short label is used always.  
+
++ Bug fix: handling of empty patterns and COUNT could give no count,
+  instead of a count of zero.  
+
++ Use base URI for realtive URI printing (i.e <foobar>)
+
++ Track DAWG:
+  Effect of OPTIONAL {{ ... FILTER }} (must be 2 or more {{}}) changes.
+  Inner {} now protects the FILTER from becoming part of the LeftJoin.  
+
++ Upgrade lucene-core-2.0.0.jar to lucene-2.2.0.jar
+  Lucene change means that users can't mix ARQ 2.1, and before,
+  with Lucene 2.1.0 or later.
+
+==== ARQ 2.1
+
++ (experimental for this release - permanent in next)
+  GROUP BY, HAVING
+  Aggregates: count(*), count(?x), count(distinct *), count(distinct ?x)
+
++ (experimental for this release - permanent in next) 
+  Expressions in SELECT clause
+  Expression in brackets, optionally named with "AS ?var"
+  Adding an explict namne is strongly encouraged especially if you use
+  the SPARQL results format because internal variables variable names
+  are not portable. 
+    SELECT (?x+?y AS ?z) ?y ?x
+    SELECT ?x ?y (?x+?y AS ?sum)  # Print a table of sums
+  OpProject can have additional expressions that get added into the
+    table from 'project'
+  
++ removed old-style (and out-of-date) writers for internal forms: prefix,
+  plain and XML forms of a SPARQL query.  The XML form was incomplete
+  anyway.  (This does not affect algebra output which is what replaces
+  these syntax-based forms).
+  
++ Added examples of using Lisp (SISC - A Java-based scheme interpreter). 
+  See the directory Lisp/. 
+  
++ NodeVar renamed ExprVar (more consistent naming)
+  Deprecated tombstones left for next release 
+
+==== ARQ 2.1 beta
+
++ Cost-based optimizer for basic graph patterns on in-memory graphs. 
+  ** Uses the version of jena shipped with this release, can't use an earlier one.   
+
++ Convert algebra expressions back into a SPARQL query (see OpToSyntax).
+
++ Old "NodeToLabelMap" => "NodeIsomorphismMap"
+  Affects Element and Op ".equalTo" operation signature.
+
++ Added extension : a graph pattern SERVICE <serviceEndPoint> { pattern }
+  ARQ syntax only.
+  New algebra operation: OpService
+
++ Added SSE to the main codebase : http://jena.hpl.hp.com/wiki/SSE
+
++ Internal changes: the core engines are now Graph/DatasetGraph/Algebra-centric 
+  and there are classes to map betwen that and the Model/Dataset.
+  QueryEngine construction and extension need not know about
+  the upper layers now.
+
++ Algebra operator implment .hashCode() and .equals() based on structure/value equality
+
++ Legacy query engine1 removed.
+
++ Add new algebra operations
+  OpGroupAgg, OpNull
+  
++ VarsMentionedVisitor removed - convert to an algebra expression and use OpVars.allVars instead.
+
+==== ARQ 2.0
+
+This version uses the SPARQL algebra directly,
+then produces an execution scheme that uses streaming
+execution where possible.
+
++ SPARQL changes
+  + Prefixed names can now start with a digit.  ex:123 is now a legal prefix name.
+  + The working group has removed attributes "ordered" and "distinct" from the
+    XML Results format. These have been removed in this release.  ARQ will read
+    old style XML files (and ignore the attributes).
+    JSON result format also updated.
+
++ Multiple query engines:
+  + Main query engine for optimization and efficient execution
+  + Reference engine for checking functionality
+    (implements the SPARQL evaluation semantics very simply for clarity and validation)
+  + Remote access engine for querying SPARQL endpoints over HTTP.
+  + Engine1, for exact ARQ1 semantics and enhancements
+    (deprecated for new applications (and will be removed sometime))
+  + RDQL engine
+  + See also SDB - an ARQ query engine that for RDF stored in SQL databases 
+
++ Access and extension points:
+   + Filter functions
+   + Property functions
+   + The parsed syntax
+   + Generation of the SPARQL algebra expression
+     + Modification of SPARQL algebra expression before executin plan generation
+     + Custom algebra operations 
+   + Basic graph pattern replacement or modification
+     for access to other data sources
+   + Modular query engine class hierarchy for reuse of machinary,
+     resulting in less extra coding for extensions.
+ 
+ + Internal changes
+   + Package reorganisation
+     Implemnentation in com.hp.hpl.jena.sparql
+   + Filter functions now take a Context, not an ExecutionContext.
+   + Deprecate "EXT" form from ARQ.
+     (Property functions are better)
+     
+ + Experimental SPARQL/Update API
+   See http://jena.hpl.hp.com/~afs/SPARQL-Update.html
+
+Post ARQ-2.0-beta: 
++ Added REDUCED as per DAWG decision 2007-03-20
++ OpDistinct and OpReduce no longer take a variable list
++ Removed ElementExtension/PlanExtension and extension package
+  The ARQ(beyond SPARQL feature) of "EXT" has been removed.
+  Element visitors may be affected.
++ Added an update API
++ LARQ
+	+ added access to the match score
+	+ added limits on score or number of results as part of Lucene search

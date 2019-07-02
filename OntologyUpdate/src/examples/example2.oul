@@ -1,0 +1,18 @@
+create changehandler leavesInstitution for 
+delete(SELECT ?x ?y where {?x <http://aifb/hasAffiliation> ?y})
+as
+	applyrequest;
+	feedback("?x does not work at ?y anymore.");
+	loop( syntactic (select ?x ?wol ?z where 
+			{{?z <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aifb/Project>.
+			?z <http://aifb/assocInstitution> ?y.
+			filter(?wol = <http://aifb/worksOn>)} 
+			union
+			{?z <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aifb/Project>.
+			?z <http://aifb/assocInstitution> ?y.
+			filter(?wol = <http://aifb/leads/>)}}))
+		delete{?x ?wol ?z};
+		feedback("Thus ?x does not lead/work on project ?z anymore.");
+	end;
+end
+

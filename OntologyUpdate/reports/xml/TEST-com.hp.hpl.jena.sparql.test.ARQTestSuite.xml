@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="1" failures="0" hostname="aifbhera" name="com.hp.hpl.jena.sparql.test.ARQTestSuite" tests="1" time="0.0" timestamp="2009-03-18T10:27:08">
+  <properties>
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="env.PROMPT" value="$P$G" />
+    <property name="version-major" value="2" />
+    <property name="reports.dir.xml" value="reports/xml" />
+    <property name="artifacts.dir" value="C:\Dokumente und Einstellungen\uhe\workspace\OntologyUpdate\tmp\artifacts" />
+    <property name="java.home" value="C:\Programme\Java\jre1.6.0_02" />
+    <property name="javadoc.all.dir" value="doc/javadoc-all" />
+    <property name="jarfile" value="arq.jar" />
+    <property name="java.endorsed.dirs" value="C:\Programme\Java\jre1.6.0_02\lib\endorsed" />
+    <property name="env.SMA" value="C:\Programme\ThinkVantage\SMA\" />
+    <property name="env.USERNAME" value="uhe" />
+    <property name="src.dir" value="src" />
+    <property name="src.build.dir" value="bldsrc" />
+    <property name="sun.os.patch.level" value="Service Pack 3" />
+    <property name="java.vendor.url" value="http://java.sun.com/" />
+    <property name="env.COMPUTERNAME" value="AIFBHERA" />
+    <property name="java.version" value="1.6.0_02" />
+    <property name="eclipse.pdebuild.home" value="/C:/Programme/eclipse/plugins/org.eclipse.pde.build_3.3.2.v20071019/./" />
+    <property name="env.NewEnvironment1" value="C:\Programme\ATI Technologies\ATI.ACE\" />
+    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi" />
+    <property name="env.USERPROFILE" value="C:\Dokumente und Einstellungen\uhe" />
+    <property name="javadoc.dir" value="doc/javadoc" />
+    <property name="env.SystemRoot" value="C:\WINDOWS" />
+    <property name="ant.file.ARQ" value="C:\Dokumente und Einstellungen\uhe\workspace\OntologyUpdate\build.xml" />
+    <property name="pub.dir.local" value="C:\Dokumente und Einstellungen\uhe\workspace\OntologyUpdate\tmp\pub" />
+    <property name="user.name" value="uhe" />
+    <property name="extra.classes" value="com/hp/hpl/jena/sparql/**/test/** com/hp/hpl/jena/sparql/**/junit/** arq/** com/hp/hpl/jena/sparql/**/suites/**" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="vocab.dir" value="Vocabularies" />
+    <property name="sun.jnu.encoding" value="Cp1252" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="lib.dir" value="lib" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="ivy.keyfile" value="C:\Dokumente und Einstellungen\uhe\workspace\OntologyUpdate\${env.IVYKEY}" />
+    <property name="user.timezone" value="" />
+    <property name="path.separator" value=";" />
+    <property name="env.PROCESSOR_IDENTIFIER" value="x86 Family 6 Model 15 Stepping 6, GenuineIntel" />
+    <property name="file.encoding" value="Cp1252" />
+    <property name="env.TVTPYDIR" value="C:\Programme\Gemeinsame Dateien\Lenovo\Python24" />
+    <property name="env.NUMBER_OF_PROCESSORS" value="2" />
+    <property name="env.APPDATA" value="C:\Dokumente und Einstellungen\uhe\Anwendungsdaten" />
+    <property name="ant.file" value="C:\Dokumente und Einstellungen\uhe\workspace\OntologyUpdate\build.xml" />
+    <property name="env.QTJAVA" value="C:\Programme\Java\jre1.6.0_05\lib\ext\QTJava.zip" />
+    <property name="java.deprecation" value="false" />
+    <property name="env.RR" value="C:\Programme\Lenovo\Rescue and Recovery" />
+    <property name="java.io.tmpdir" value="C:\DOKUME~1\uhe\LOKALE~1\Temp\" />
+    <property name="env.TVTCOMMON" value="C:\Programme\Gemeinsame Dateien\Lenovo" />
+    <property name="TODAY" value="March 18 2009" />
+    <property name="user.language" value="de" />
+    <property name="env.SystemDrive" value="C:" />
+    <property name="line.separator" value="
+" />
+    <property name="grammar.dir" value="Grammar" />
+    <property name="java.debug" value="true" />
+    <property name="version-revision" value="0" />
+    <property name="env.NUTCH_JAVA_HOME" value="C:\Programme\Java\jre1.6.0_02" />
+    <property name="classes.build.dir" value="bldbin" />
+    <property name="name" value="arq" />
+    <property name="dist.root" value="dist" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="env.DEFLOGDIR" value="C:\Dokumente und Einstellungen\All Users\Anwendungsdaten\McAfee\DesktopProtection" />
+    <property name="sun.desktop" value="windows" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="version" value="2.5.0" />
+    <property name="version-status" value="" />
+    <property name="env.PATHEXT" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH" />
+    <property name="Name" value="ARQ" />
+    <property name="env.LOGONSERVER" value="\\AIFBHERA" />
+    <property name="eclipse.pdebuild.templates" value="/C:/Programme/eclipse/plugins/org.eclipse.pde.build_3.3.2.v20071019/templates/" />
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+    <property name="reports.outdir" value="reports" />
+    <property name="ant.version" value="Apache Ant version 1.7.0 compiled on December 13 2006" />
+    <property name="env.USERDOMAIN" value="AIFBHERA" />
+    <property name="ivy.user" value="${env.IVYUSER}" />
+    <property name="java.debuglevel" value="source,lines,vars" />
+    <property name="env.PROCESSOR_LEVEL" value="6" />
+    <property name="env.windir" value="C:\WINDOWS" />
+    <property name="env.CLASSPATH" value=".;C:\Programme\Java\jre1.6.0_05\lib\ext\QTJava.zip;C:\Programme\Lemur\Lemur 4.7\lib" />
+    <property name="os.name" value="Windows XP" />
+    <property name="java.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="env.TMP" value="C:\DOKUME~1\uhe\LOKALE~1\Temp" />
+    <property name="java.vm.name" value="Java HotSpot(TM) Client VM" />
+    <property name="env.OS" value="Windows_NT" />
+    <property name="java.library.path" value="C:\Programme\eclipse;.;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Programme\Java\jre1.6.0_07\bin\client;C:\Programme\Java\jre1.6.0_07\bin;c:\programme\imagemagick-6.4.1-q16;C:\Programme\PHP\;C:\Programme\ThinkPad\Utilities;C:\WINDOWS\System32\Wbem;C:\Programme\ThinkPad\ConnectUtilities;C:\Programme\Intel\Wireless\Bin\;C:\Programme\MySQL\MySQL Server 5.0\bin;C:\Programme\QuickTime\QTSystem\;C:\Programme\Samsung\Samsung PC Studio 3\;C:\Programme\SSH Communications Security\SSH Secure Shell;C:\Programme\PHP\;C:\Programme\MiKTeX 2.5\miktex\bin;C:\Programme\ThinkPad\Utilities;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Programme\Intel\Wireless\Bin\;C:\Programme\Diskeeper Corporation\Diskeeper\;C:\Programme\ThinkPad\ConnectUtilities;C:\Programme\Gemeinsame Dateien\Lenovo;C:\Programme\Lenovo\Client Security Solution;C:\Programme\MySQL\MySQL Server 5.0\bin;C:\Programme\javacc-4.1\bin;C:\Programme\eclipse\configuration\org.eclipse.osgi\bundles\510\1\.cp" />
+    <property name="eclipse.pdebuild.scripts" value="/C:/Programme/eclipse/plugins/org.eclipse.pde.build_3.3.2.v20071019/scripts/" />
+    <property name="ant.java.version" value="1.6" />
+    <property name="basedir" value="C:\Dokumente und Einstellungen\uhe\workspace\OntologyUpdate" />
+    <property name="java.class.version" value="50.0" />
+    <property name="ant.home" value="C:\Programme\eclipse\plugins\org.apache.ant_1.7.0.v200706080842" />
+    <property name="env.Path" value="C:\Programme\Java\jre1.6.0_07\bin\client;C:\Programme\Java\jre1.6.0_07\bin;c:\programme\imagemagick-6.4.1-q16;C:\Programme\PHP\;C:\Programme\ThinkPad\Utilities;C:\WINDOWS\System32\Wbem;C:\Programme\ThinkPad\ConnectUtilities;C:\Programme\Intel\Wireless\Bin\;C:\Programme\MySQL\MySQL Server 5.0\bin;C:\Programme\QuickTime\QTSystem\;C:\Programme\Samsung\Samsung PC Studio 3\;C:\Programme\SSH Communications Security\SSH Secure Shell;C:\Programme\PHP\;C:\Programme\MiKTeX 2.5\miktex\bin;C:\Programme\ThinkPad\Utilities;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Programme\Intel\Wireless\Bin\;C:\Programme\Diskeeper Corporation\Diskeeper\;C:\Programme\ThinkPad\ConnectUtilities;C:\Programme\Gemeinsame Dateien\Lenovo;C:\Programme\Lenovo\Client Security Solution;C:\Programme\MySQL\MySQL Server 5.0\bin;C:\Programme\javacc-4.1\bin" />
+    <property name="env.HOMEDRIVE" value="C:" />
+    <property name="sun.boot.library.path" value="C:\Programme\Java\jre1.6.0_02\bin" />
+    <property name="env.PROCESSOR_REVISION" value="0f06" />
+    <property name="env.VSEDEFLOGDIR" value="C:\Dokumente und Einstellungen\All Users\Anwendungsdaten\McAfee\DesktopProtection" />
+    <property name="sun.management.compiler" value="HotSpot Client Compiler" />
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+    <property name="arq.root" value="src/com/hp/hpl/jena/query" />
+    <property name="user.variant" value="" />
+    <property name="env.JRE_HOME" value="C:\Programme\Java\jre1.6.0_02" />
+    <property name="ant.project.name" value="ARQ" />
+    <property name="java.optimize" value="false" />
+    <property name="java.vm.specification.version" value="1.0" />
+    <property name="src-test.dir" value="src-test" />
+    <property name="version-minor" value="5" />
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+    <property name="doc.dir" value="doc" />
+    <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86" />
+    <property name="env.PHPRC" value="C:\Programme\PHP\" />
+    <property name="java.target" value="1.4" />
+    <property name="java.ext.dirs" value="C:\Programme\Java\jre1.6.0_02\lib\ext;C:\WINDOWS\Sun\Java\lib\ext" />
+    <property name="os.version" value="5.1" />
+    <property name="BUILD_TIME_XSD" value="2009-03-18T11:24:46+0100" />
+    <property name="user.home" value="C:\Dokumente und Einstellungen\uhe" />
+    <property name="java.vm.vendor" value="Sun Microsystems Inc." />
+    <property name="env.JAVA_HOME" value="C:\Programme\Java\jdk1.6.0_02" />
+    <property name="env.__COMPAT_LAYER" value="EnableNXShowUI " />
+    <property name="java.source" value="1.4" />
+    <property name="user.dir" value="C:\Dokumente und Einstellungen\uhe\workspace\OntologyUpdate" />
+    <property name="env.FP_NO_HOST_CHECK" value="NO" />
+    <property name="env.TVT" value="C:\Programme\Lenovo" />
+    <property name="test.dir" value="testing" />
+    <property name="src-ex.dir" value="src-examples" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="env.ALLUSERSPROFILE" value="C:\Dokumente und Einstellungen\All Users" />
+    <property name="BUILD_TIME" value="2009-03-18 11:24 +0100" />
+    <property name="dist.name" value="ARQ-2.5.0" />
+    <property name="env.PROCESSOR_ARCHITECTURE" value="x86" />
+    <property name="java.vm.version" value="1.6.0_02-b06" />
+    <property name="java.class.path" value="C:\Programme\eclipse\plugins\org.apache.ant_1.7.0.v200706080842\lib\ant.jar;C:\Programme\eclipse\plugins\org.apache.ant_1.7.0.v200706080842\lib\ant-antlr.jar;C:\Programme\eclipse\plugins\org.apache.ant_1.7.0.v200706080842\lib\ant-apache-bcel.jar;C:\Programme\eclipse\plugins\org.apache.ant_1.7.0.v200706080842\lib\ant-apache-bsf.jar;C:\Programme\eclipse\plugins\org.apache.ant_1.7.0.v200706080842\lib\ant-apache-log4j.jar;C:\Programme\eclipse\plugins\org.apache.ant_1.7.0.v200706080842\lib\ant-apache-oro.jar;C:\Programme\eclipse\plugins\org.apache.ant_1.7.0.v200706080842\lib\ant-apache-regexp.jar;C:\Programme\eclipse\plugins\org.apache.ant_1.7.0.v200706080842\lib\ant-apache-resolver.jar;C:\Programme\eclipse\plugins\org.apache.ant_1.7.0.v200706080842\lib\ant-commons-logging.jar;C:\Programme\eclipse\plugins\org.apache.ant_1.7.0.v200706080842\lib\ant-commons-net.jar;C:\Programme\eclipse\plugins\org.apache.ant_1.7.0.v200706080842\lib\ant-jai.jar;C:\Programme\eclipse\plugins\org.apache.ant_1.7.0.v200706080842\lib\ant-javamail.jar;C:\Programme\eclipse\plugins\org.apache.ant_1.7.0.v200706080842\lib\ant-jdepend.jar;C:\Programme\eclipse\plugins\org.apache.ant_1.7.0.v200706080842\lib\ant-jmf.jar;C:\Programme\eclipse\plugins\org.apache.ant_1.7.0.v200706080842\lib\ant-jsch.jar;C:\Programme\eclipse\plugins\org.apache.ant_1.7.0.v200706080842\lib\ant-junit.jar;C:\Programme\eclipse\plugins\org.apache.ant_1.7.0.v200706080842\lib\ant-launcher.jar;C:\Programme\eclipse\plugins\org.apache.ant_1.7.0.v200706080842\lib\ant-netrexx.jar;C:\Programme\eclipse\plugins\org.apache.ant_1.7.0.v200706080842\lib\ant-nodeps.jar;C:\Programme\eclipse\plugins\org.apache.ant_1.7.0.v200706080842\lib\ant-starteam.jar;C:\Programme\eclipse\plugins\org.apache.ant_1.7.0.v200706080842\lib\ant-stylebook.jar;C:\Programme\eclipse\plugins\org.apache.ant_1.7.0.v200706080842\lib\ant-swing.jar;C:\Programme\eclipse\plugins\org.apache.ant_1.7.0.v200706080842\lib\ant-trax.jar;C:\Programme\eclipse\plugins\org.apache.ant_1.7.0.v200706080842\lib\ant-weblogic.jar;C:\Programme\eclipse\configuration\org.eclipse.osgi\bundles\66\1\.cp\lib\remoteAnt.jar;C:\Programme\Java\jdk1.6.0_02\lib\tools.jar;C:\Programme\eclipse\plugins\org.eclipse.swt.win32.win32.x86_3.3.3.v3349.jar" />
+    <property name="env.HOMEPATH" value="\Dokumente und Einstellungen\uhe" />
+    <property name="DSTAMP" value="20090318" />
+    <property name="env.SonicCentral" value="C:\Programme\Gemeinsame Dateien\Sonic Shared\Sonic Central\" />
+    <property name="ant.library.dir" value="C:\Programme\eclipse\plugins\org.apache.ant_1.7.0.v200706080842\lib" />
+    <property name="os.arch" value="x86" />
+    <property name="env.SESSIONNAME" value="Console" />
+    <property name="dist.dir" value="dist/ARQ-2.5.0" />
+    <property name="arq.path.impl" value="com/hp/hpl/jena/sparql" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="env.CommonProgramFiles" value="C:\Programme\Gemeinsame Dateien" />
+    <property name="ant.core.lib" value="C:\Programme\eclipse\plugins\org.apache.ant_1.7.0.v200706080842\lib\ant.jar" />
+    <property name="env.ProgramFiles" value="C:\Programme" />
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="TSTAMP" value="1124" />
+    <property name="env.SWSHARE" value="C:\SWSHARE" />
+    <property name="file.separator" value="\" />
+    <property name="java.runtime.version" value="1.6.0_02-b06" />
+    <property name="reports.dir" value="reports" />
+    <property name="sun.boot.class.path" value="C:\Programme\Java\jre1.6.0_02\lib\resources.jar;C:\Programme\Java\jre1.6.0_02\lib\rt.jar;C:\Programme\Java\jre1.6.0_02\lib\sunrsasign.jar;C:\Programme\Java\jre1.6.0_02\lib\jsse.jar;C:\Programme\Java\jre1.6.0_02\lib\jce.jar;C:\Programme\Java\jre1.6.0_02\lib\charsets.jar;C:\Programme\Java\jre1.6.0_02\classes" />
+    <property name="env.ComSpec" value="C:\WINDOWS\system32\cmd.exe" />
+    <property name="env.TEMP" value="C:\DOKUME~1\uhe\LOKALE~1\Temp" />
+    <property name="user.country" value="DE" />
+    <property name="env.ANT_HOME" value="C:\Programme\eclipse\plugins\org.apache.ant_1.7.0.v200706080842" />
+    <property name="jarfile.extra" value="arq-extra.jar" />
+    <property name="java.vendor" value="Sun Microsystems Inc." />
+    <property name="java.specification.version" value="1.6" />
+    <property name="sun.arch.data.model" value="32" />
+  </properties>
+  <error type="java.lang.reflect.InvocationTargetException">java.lang.reflect.InvocationTargetException
+	at org.eclipse.ant.internal.ui.antsupport.EclipseDefaultExecutor.executeTargets(EclipseDefaultExecutor.java:32)
+	at org.eclipse.ant.internal.ui.antsupport.InternalAntRunner.run(InternalAntRunner.java:423)
+	at org.eclipse.ant.internal.ui.antsupport.InternalAntRunner.main(InternalAntRunner.java:137)
+Caused by: java.lang.ExceptionInInitializerError
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at com.hp.hpl.jena.sparql.suites.TS_Update.class$(TS_Update.java:19)
+	at com.hp.hpl.jena.sparql.suites.TS_Update.suite(TS_Update.java:20)
+	at com.hp.hpl.jena.sparql.test.ARQTestSuite.suite(ARQTestSuite.java:64)
+Caused by: com.hp.hpl.jena.query.QueryParseException: Encountered &quot; &lt;VAR&gt; &quot;2007 &quot;&quot; at line 1, column 1.
+Was expecting one of:
+    &lt;IRIref&gt; ...
+    &lt;PNAME_NS&gt; ...
+    &lt;PNAME_LN&gt; ...
+    &lt;BLANK_NODE_LABEL&gt; ...
+    &quot;true&quot; ...
+    &quot;false&quot; ...
+    &lt;INTEGER&gt; ...
+    &lt;DECIMAL&gt; ...
+    &lt;DOUBLE&gt; ...
+    &lt;INTEGER_POSITIVE&gt; ...
+    &lt;DECIMAL_POSITIVE&gt; ...
+    &lt;DOUBLE_POSITIVE&gt; ...
+    &lt;INTEGER_NEGATIVE&gt; ...
+    &lt;DECIMAL_NEGATIVE&gt; ...
+    &lt;DOUBLE_NEGATIVE&gt; ...
+    &lt;STRING_LITERAL1&gt; ...
+    &lt;STRING_LITERAL2&gt; ...
+    &lt;STRING_LITERAL_LONG1&gt; ...
+    &lt;STRING_LITERAL_LONG2&gt; ...
+    &lt;NIL&gt; ...
+    &lt;ANON&gt; ...
+    
+	at com.hp.hpl.jena.sparql.util.NodeFactory.create(NodeFactory.java:43)
+	at com.hp.hpl.jena.sparql.suites.TestUpdateGraph.&lt;clinit&gt;(TestUpdateGraph.java:43)
+</error>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
